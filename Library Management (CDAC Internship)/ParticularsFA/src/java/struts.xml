@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="addSchemeRecords" class="action.fetchRecordsAction" method="addSchemeRecords">
+            <result name="success" type="redirectAction">fetchSchemeRecord</result>
+            <result name="error" type="redirectAction">fetchSchemeRecord</result>
+        </action>
+        <action name="fetchSchemeRecord" class="action.fetchRecordsAction" method="fetchSchemeRecord">
+            <result name="success">/pages/SchemeRecord.jsp</result>
+            <result name="error">/pages/SchemeRecord.jsp</result>
+        </action>
+        <action name="executeShowScheme" class="action.fetchRecordsAction" method="fetchSchemeRecord">
+            <result name="success">/pages/SchemeRecord.jsp</result>
+            <result name="error">/pages/SchemeRecord.jsp</result>
+        </action>
+        
+    </package>
+</struts>

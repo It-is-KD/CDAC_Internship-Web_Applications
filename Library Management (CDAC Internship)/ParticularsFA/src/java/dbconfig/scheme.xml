@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="scheme">
+    <typeAlias alias="schemeBean" type="scheme_bean.SchemeRecordBean"/>
+    
+
+    <insert id="addSchemeRecord"  parameterClass="schemeBean">
+        insert into particularsfa(seminar, purchaseBooks, purchaseFurniture, costofCM, purchaseComputer, renovation, organisation, publishing) values (#seminar#, #purchaseBooks#, #purchaseFurniture#, #costofCM#, #purchaseComputer#, #renovation#, #organisation#, #publishing#)
+    </insert>
+    
+    <select id="getSchemeRecord" resultClass="schemeBean"> 
+        SELECT seminar, purchaseBooks, purchaseFurniture, costofCM, purchaseComputer, renovation, organisation, publishing, (seminar+purchaseBooks+purchaseFurniture+costofCM+purchaseComputer+renovation+organisation+publishing) AS total FROM particularsfa;
+    </select>   
+</sqlMap>
