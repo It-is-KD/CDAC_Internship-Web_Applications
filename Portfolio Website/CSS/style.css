@@ -268,9 +268,12 @@ img {
 .home_blob{
   width: 350px;
   fill: var(--first-color);
+  margin-left: 4rem;
 }
 
-.home_blob-img{width: 95px;}
+.home_blob-img{
+  width: 95px;
+}
 
 .home_data{grid-column: 1/3;}
 
@@ -806,7 +809,7 @@ img {
     }
     
     .home_social-icon{
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 }
 
